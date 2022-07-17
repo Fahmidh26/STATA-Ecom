@@ -68,11 +68,13 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->get();
                       <div class="col-sm-12 col-md-3">
 
   {{-- <a href="{{ url('subcategory/product/'.$subcategory->id.'/'.$subcategory->subcategory_slug_en ) }}">                       --}}
-  <a href="{{ url('subcategory/product/'.$subcategory->id ) }}">                      
+    <ul class="links list-unstyled">
+ <li> <a href="{{ url('subcategory/product/'.$subcategory->id ) }}">                      
  <h2 class="title">
  {{ $subcategory->subcategory_name }} 
   </h2>
-  </h2> </a>
+  </h2> </a></li>
+    </ul>
 
     <!--   // Get SubSubCategory Table Data -->
   {{-- @php
