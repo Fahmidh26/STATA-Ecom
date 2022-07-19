@@ -135,7 +135,7 @@ $seo = App\Models\Seo::find(1);
          <div class="col-md-4">
  
       <ul class="list-group">
-         <li class="list-group-item">Product Price: <strong class="text-danger">$<span id="pprice"></span></strong>
+         <li class="list-group-item">Product Price: <strong class="text-danger">TK <span id="pprice"></span></strong>
          <del id="oldprice">TK </del>
          </li>
          <li class="list-group-item">Product Code: <strong id="pcode"></strong></li>
@@ -228,7 +228,7 @@ function productView(id){
             if (data.product.product_qty > 0) {
                 $('#aviable').text('');
                 $('#stockout').text('');
-                $('#aviable').text('aviable');
+                $('#aviable').text('available');
             }else{
                 $('#aviable').text('');
                 $('#stockout').text('');

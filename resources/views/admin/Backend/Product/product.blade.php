@@ -381,7 +381,7 @@
 				<div class="controls">
 					<fieldset>
 						<input type="checkbox" id="checkbox_5" name="combo" value="1">
-						<label for="checkbox_4">Combo</label>
+						<label for="checkbox_5">Combo</label>
 					</fieldset>
 				</div>
 			</div>	 

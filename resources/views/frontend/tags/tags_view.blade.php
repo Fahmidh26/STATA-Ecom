@@ -79,7 +79,7 @@ Tag Wise Product
             <!-- ============================================== SIDEBAR CATEGORY : END ============================================== --> 
 
             <!-- ============================================== PRICE SILDER============================================== -->
-            <div class="sidebar-widget wow fadeInUp">
+            {{-- <div class="sidebar-widget wow fadeInUp">
               <div class="widget-header">
                 <h4 class="widget-title">Price Slider</h4>
               </div>
@@ -91,11 +91,11 @@ Tag Wise Product
                 <!-- /.price-range-holder --> 
                 <a href="#" class="lnk btn btn-primary">Show Now</a> </div>
               <!-- /.sidebar-widget-body --> 
-            </div>
+            </div> --}}
             <!-- /.sidebar-widget --> 
             <!-- ============================================== PRICE SILDER : END ============================================== --> 
             <!-- ============================================== MANUFACTURES============================================== -->
-            <div class="sidebar-widget wow fadeInUp">
+            {{-- <div class="sidebar-widget wow fadeInUp">
               <div class="widget-header">
                 <h4 class="widget-title">Manufactures</h4>
               </div>
@@ -111,11 +111,11 @@ Tag Wise Product
                 <!--<a href="#" class="lnk btn btn-primary">Show Now</a>--> 
               </div>
               <!-- /.sidebar-widget-body --> 
-            </div>
+            </div> --}}
             <!-- /.sidebar-widget --> 
             <!-- ============================================== MANUFACTURES: END ============================================== --> 
             <!-- ============================================== COLOR============================================== -->
-            <div class="sidebar-widget wow fadeInUp">
+            {{-- <div class="sidebar-widget wow fadeInUp">
               <div class="widget-header">
                 <h4 class="widget-title">Colors</h4>
               </div>
@@ -130,11 +130,11 @@ Tag Wise Product
                 </ul>
               </div>
               <!-- /.sidebar-widget-body --> 
-            </div>
+            </div> --}}
             <!-- /.sidebar-widget --> 
             <!-- ============================================== COLOR: END ============================================== --> 
             <!-- ============================================== COMPARE============================================== -->
-            <div class="sidebar-widget wow fadeInUp outer-top-vs">
+            {{-- <div class="sidebar-widget wow fadeInUp outer-top-vs">
               <h3 class="section-title">Compare products</h3>
               <div class="sidebar-widget-body">
                 <div class="compare-report">
@@ -143,7 +143,7 @@ Tag Wise Product
                 <!-- /.compare-report --> 
               </div>
               <!-- /.sidebar-widget-body --> 
-            </div>
+            </div> --}}
             <!-- /.sidebar-widget --> 
             <!-- ============================================== COMPARE: END ============================================== --> 
             <!-- ============================================== PRODUCT TAGS ============================================== -->
@@ -164,7 +164,7 @@ Tag Wise Product
       <div class='col-md-9'> 
         <!-- ========================================== SECTION – HERO ========================================= -->
 
-        <div id="category" class="category-carousel hidden-xs">
+        {{-- <div id="category" class="category-carousel hidden-xs">
           <div class="item">
             <div class="image"> <img src="{{ asset('frontend/assets/images/banners/cat-banner-1.jpg') }}" alt="" class="img-responsive"> </div>
             <div class="container-fluid">
@@ -177,7 +177,7 @@ Tag Wise Product
             </div>
             <!-- /.container-fluid --> 
           </div>
-        </div>
+        </div> --}}
 
 
         <div class="clearfix filters-container m-t-10">
@@ -192,7 +192,7 @@ Tag Wise Product
               <!-- /.filter-tabs --> 
             </div>
             <!-- /.col -->
-            <div class="col col-sm-12 col-md-6">
+            {{-- <div class="col col-sm-12 col-md-6">
               <div class="col col-sm-3 col-md-6 no-padding">
                 <div class="lbl-cnt"> <span class="lbl">Sort by</span>
                   <div class="fld inline">
@@ -235,7 +235,7 @@ Tag Wise Product
                 <!-- /.lbl-cnt --> 
               </div>
               <!-- /.col --> 
-            </div>
+            </div> --}}
             <!-- /.col -->
             <div class="col col-sm-6 col-md-4 text-right">
                 {{-- paginate up--}}
@@ -300,16 +300,16 @@ Tag Wise Product
         <div class="cart clearfix animate-effect">
           <div class="action">
             <ul class="list-unstyled">
-              <li class="add-cart-button btn-group">
-                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-              </li>
-              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+            <li class="add-cart-button btn-group">
+              <button data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
+              <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+            </li>
+            <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+            <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
             </ul>
           </div>
           <!-- /.action --> 
-        </div>
+          </div>
         <!-- /.cart --> 
       </div>
       <!-- /.product --> 
@@ -370,11 +370,11 @@ Tag Wise Product
                                 <div class="action">
                                   <ul class="list-unstyled">
                                     <li class="add-cart-button btn-group">
-                                      <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                      <button data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
                                       <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                     </li>
                                     <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                    <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                    {{-- <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li> --}}
                                   </ul>
                                 </div>
                                 <!-- /.action --> 
@@ -393,7 +393,7 @@ Tag Wise Product
                         @endphp
                             
                       <!-- /.product-list-row -->
-                      <div>
+                       <div>
                         @if ($product->discount_price == NULL)
                         <div class="tag new"><span>new</span></div>
                         @else

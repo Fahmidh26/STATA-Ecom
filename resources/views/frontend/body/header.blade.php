@@ -225,7 +225,7 @@
                           </div>
                           <!-- /.col -->
                           
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/banners/top-menu-banner.jpg') }}" alt=""> </div>
                           <!-- /.yamm-content --> 
                         </div>
                       </div>
@@ -314,10 +314,8 @@
                   </ul>
                 </li>
                 <li class="dropdown hidden-sm"> <a href="category.html">Health & Beauty <span class="menu-label new-menu hidden-xs">new</span> </a> </li>
-                <li class="dropdown hidden-sm"> <a href="category.html">Watches</a> </li>
-                <li class="dropdown"> <a href="contact.html">Jewellery</a> </li>
-                <li class="dropdown"> <a href="contact.html">Shoes</a> </li>
-                <li class="dropdown"> <a href="contact.html">Kids & Girls</a> </li>
+               
+                {{-- <li class="dropdown"> <a href="contact.html">Kids & Girls</a> </li> --}}
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>
                   <ul class="dropdown-menu pages">
                     <li>
